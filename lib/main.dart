@@ -1,3 +1,4 @@
+import 'package:atlas_flutter_app/sensor_data_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -29,8 +30,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final int _counter = 1;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,16 +40,25 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            ElevatedButton(
+                onPressed: () => _navigateToSensorDataWidget("userAccelerometer"),
+                child: const Text("See accelerometer data")),
+            ElevatedButton(
+                onPressed: () => _navigateToSensorDataWidget("gyroscope"),
+                child: const Text("See gyroscope data")),
           ],
         ),
       ),
     );
+  }
+
+  _navigateToSensorDataWidget(String type) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return Scaffold(
+          appBar: AppBar(
+            title: Text("$type Sensor Data"),
+          ),
+          body: SensorDataWidget(sensorType: type));
+    }));
   }
 }
