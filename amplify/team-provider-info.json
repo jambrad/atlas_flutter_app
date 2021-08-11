@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-atlasflutterapp-dev-230707-authRole",
+      "UnauthRoleArn": "arn:aws:iam::043836424350:role/amplify-atlasflutterapp-dev-230707-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::043836424350:role/amplify-atlasflutterapp-dev-230707-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-atlasflutterapp-dev-230707-deployment",
+      "UnauthRoleName": "amplify-atlasflutterapp-dev-230707-unauthRole",
+      "StackName": "amplify-atlasflutterapp-dev-230707",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:043836424350:stack/amplify-atlasflutterapp-dev-230707/7adf7ad0-f923-11eb-9d09-066a9d5115f0",
+      "AmplifyAppId": "dbc2zatb0uowc"
+    },
+    "categories": {
+      "auth": {
+        "cognito19668166": {}
+      },
+      "function": {
+        "atlasflutterfunction": {
+          "deploymentBucketName": "amplify-atlasflutterapp-dev-230707-deployment",
+          "s3Key": "amplify-builds/atlasflutterfunction-76376c7a7267336b6a38-build.zip"
+        }
+      }
+    }
+  }
+}

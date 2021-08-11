@@ -1,0 +1,36 @@
+{
+    "paths": [
+        {
+            "name": "/api",
+            "lambdaFunction": "atlasflutterfunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/api"
+        }
+    ],
+    "resourceName": "atlasflutterapi",
+    "apiName": "atlasflutterapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "atlasflutterfunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-atlasflutterapp-dev-230707-authRole",
+        "unAuthRoleName": "amplify-atlasflutterapp-dev-230707-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "atlasflutterfunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ],
+    "uuid": "48bc1521"
+}
